@@ -1,16 +1,37 @@
-$(document).ready(function() {
-    for(var x = 0; x < 16; x++) {
-        for(var y = 0; y < 16; y++) {
+
+function createGrid(x) {
+    var x= 16;
+    for(var rows = 0; rows < x; rows++) {
+        for(var columns = 0; columns < x; columns++) {
             var unit = $("<div class='unit'></div>");
             unit.appendTo('.container');
-        }
-    }
+        };
+    };
+    $('.unit').width(960/x);
+    $('.unit').height(960/x);
+};
 
-    $('.unit').on('mouseover',function() {
-      $(this).css("background-color", "black");
+function clearGrid() {
+  $('.unit').css("background-color", "white");
+};
+
+function refreshGrid() {
+var z = prompt("how many boxes?");
+  clearGrid();
+  createGrid(z);
+};
 
 
 
+$(document).ready(function() {
+  createGrid(16);
 
+  $('.unit').on('mouseenter', function() {
+    $(this).css("background-color", "black");
   });
+
+  $('.newGrid').on('click', function()  {
+    refreshGrid();
+  });
+
 });
