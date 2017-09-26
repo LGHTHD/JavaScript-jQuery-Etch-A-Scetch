@@ -1,0 +1,21 @@
+.container {
+    background-color: black;
+    height: 960px;
+    width: 960px;
+}
+
+.changeColor {
+  background-color: black;
+  height: 40px;
+  width: 40px;
+  margin: 1px;
+  float: left;
+}
+
+.unit {
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    margin: 1px;
+    float: left;
+}
