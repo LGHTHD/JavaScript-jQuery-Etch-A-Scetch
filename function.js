@@ -1,6 +1,5 @@
 
 function createGrid(x) {
-    var x= 16;
     for(var rows = 0; rows < x; rows++) {
         for(var columns = 0; columns < x; columns++) {
             var unit = $("<div class='unit'></div>");
@@ -16,9 +15,9 @@ function clearGrid() {
 };
 
 function refreshGrid() {
-var z = prompt("how many boxes?");
+var x = prompt("how many boxes?");
   clearGrid();
-  createGrid(z);
+  createGrid(x);
 };
 
 
